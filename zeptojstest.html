@@ -5,18 +5,30 @@
   <meta charset="UTF-8">
   <title></title>
   <!-- <script src="https://zeptojs.com/zepto.min.js"></script> -->
-  <script src="../zeptotest/zepto.js"></script>
+  <script src="../zepto_read_source/zepto.js"></script>
 </head>
 
 <body>
-  <div>12323232323</div>
+  <div>12323232323</div>  
   <div id="id">有id的div</div>
-  <div class="css">有class的div</div>
+  <div class="css test1 test2">有class的div</div>
   <div id="parent">父节点
     <div>子节点1 
-      <div id="node">子子节点</div>
+      <div id="node" style="background-color: red;font-size:18px">子子节点</div>
+      <input id="input" type="text">
     </div>
   </div>
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+  </ul>
+  <p>a paragraph</p>
+  <form>
+    <input type="text">
+    <select name="" id=""></select>
+  </form>
+  <p id="hideNode" style="display: none">一个隐藏的节点</p>
   <script>
   // var empty=$()
   // var newdiv=$('<div><p>23223</p></div><div></div><p></p>')
@@ -40,6 +52,83 @@
   // $.extend(true,a, b)
   // a.two.two1=99
   // console.log(a,b);
+
+  // $.map([1,2,3,4,5],function(item,index){
+  //         if(item>1){return item*item;}
+  // }); 
+  // // =>[4, 9, 16, 25]
+
+  // $.map({"yao":1,"tai":2,"yang":3},function(item,index){
+  //     if(item>1){return item*item;}
+  // }); 
+  // // =>[4, 9]
+
+  // $('li').add('p').css('background-color', 'red');
+
+  // $('ul').addClass('test')
+
+  // $('p').after('<p>another paragraph</p>')
+
+  // $('<li>new list item</li>').appendTo('ul')
+  // var testObj={}
+  // var array=['test1','test2']
+  // array.forEach(function(item,index){
+  //   testObj[item]=function(){
+  //     console.log(item)
+  //   }
+  //   testObj[item+'Add']=function(){
+  //     console.log('Add'+item)
+  //   }
+  // })
+  // testObj.test1()
+  // testObj.test1Add()
+
+// var form = $('form')
+// form.attr('action')             //=> 读取值
+// form.attr('action', '/create')  //=> 设置值
+// form.attr('action', null)       //=> 移除属性
+// // 多个属性:
+// form.attr({
+//   action: '/create',
+//   method: 'post'
+// })
+
+// $('ul').children('*:nth-child(2n)')  //没看懂
+
+// $('ul').clone()
+
+// $('#input').closest('div')
+
+// $('#node').css(['backgroundColor', 'fontSize'])
+
+// $('form input').each(function(index){
+//   console.log('input %d is: %o', index, this)
+// })
+
+// console.log($('li').eq(2))
+
+// console.log($('form').find('input, select'))
+
+// $('form').first()
+
+// console.log($('#id').height(),   // => 123
+// $(window).height(),   // => 838 (viewport height)
+// $(document).height())
+
+// console.log($('div').next())
+
+// $('#node').offset({left:20,top:30})
+
+// console.log($('#node').parents())
+
+// console.log($('#node').position())
+// console.log($('#node').removeAttr('style id'))
+// console.log($('#node').removeAttr('style id'))
+
+// console.log($('.css').removeClass('test1 test2'))
+// console.log($('.css').replaceWith('<p>哈哈哈哈哈</p>'))
+
+// $('#hideNode').show()
   </script> 
 </body>
 
